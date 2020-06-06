@@ -4,6 +4,7 @@ import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 
+import scala.concurrent.ExecutionContextExecutor
 import scala.io.StdIn
 
 object MainApp extends App {
@@ -22,7 +23,7 @@ object MainApp extends App {
   println(s"Server online at http://localhost:9000/\nPress RETURN to stop...")
   StdIn.readLine() // let it run until user presses return
 
-  implicit val dispatcher = mainActorSystem.dispatcher
+  implicit val dispatcher: ExecutionContextExecutor = mainActorSystem.dispatcher
 
   bindingFuture.flatMap(_.unbind()).onComplete(_ => mainActorSystem.terminate())
 
