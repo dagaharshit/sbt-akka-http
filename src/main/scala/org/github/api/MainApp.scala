@@ -17,9 +17,9 @@ object MainApp extends App {
   }
 
   implicit val ec: scala.concurrent.ExecutionContext = scala.concurrent.ExecutionContext.global
-  val bindingFuture = Http().bindAndHandle(PingPongApiObject.routes, "localhost", 9000)
+  val bindingFuture = Http().bindAndHandle(PingPongApiObject.routes, "localhost", 9001)
 
-  println(s"Server online at http://localhost:9000/\nPress RETURN to stop...")
+  println(s"Server online at http://localhost:9001/\nPress RETURN to stop...")
   StdIn.readLine() // let it run until user presses return
 
   implicit val dispatcher = mainActorSystem.dispatcher
