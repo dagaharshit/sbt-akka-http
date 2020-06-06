@@ -11,3 +11,4 @@ libraryDependencies ++=
     "com.typesafe.akka" %% "akka-stream-testkit" % "2.5.26" % "test",
     "com.typesafe.akka" %% "akka-http-testkit" % "10.1.12" % "test"
   )
+
