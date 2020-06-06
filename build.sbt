@@ -2,7 +2,7 @@ name := "sbt-akka-http"
 
 version := "0.2"
 
-scalaVersion := "2.13.1"
+scalaVersion := "2.13.2"
 
 libraryDependencies ++=
   Seq("com.typesafe.akka" %% "akka-http"   % "10.1.12",
